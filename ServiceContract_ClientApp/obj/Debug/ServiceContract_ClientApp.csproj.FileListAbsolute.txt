@@ -1,0 +1,11 @@
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\bin\Debug\ServiceContract_ClientApp.exe.config
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\bin\Debug\ServiceContract_ClientApp.exe
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\bin\Debug\ServiceContract_ClientApp.pdb
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.csproj.AssemblyReference.cache
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.Properties.Resources.resources
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.csproj.GenerateResource.cache
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.csproj.CoreCompileInputs.cache
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.exe
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.pdb
+C:\Users\hoops\source\repos\AstroMath_Project\ServiceContract_ClientApp\obj\Debug\ServiceContract_ClientApp.AstroClient.resources
