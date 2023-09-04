@@ -1,0 +1,6 @@
+C:\Users\hoops\source\repos\AstroMath_Project\AstroMath\bin\Release\AstroMath.dll
+C:\Users\hoops\source\repos\AstroMath_Project\AstroMath\bin\Release\AstroMath.pdb
+C:\Users\hoops\source\repos\AstroMath_Project\AstroMath\obj\Release\AstroMath.csproj.AssemblyReference.cache
+C:\Users\hoops\source\repos\AstroMath_Project\AstroMath\obj\Release\AstroMath.csproj.CoreCompileInputs.cache
+C:\Users\hoops\source\repos\AstroMath_Project\AstroMath\obj\Release\AstroMath.dll
+C:\Users\hoops\source\repos\AstroMath_Project\AstroMath\obj\Release\AstroMath.pdb
