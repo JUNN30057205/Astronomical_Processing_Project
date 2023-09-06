@@ -18,25 +18,25 @@ namespace Test_AstroMath.DLL
 
             //Star Velocity
             Console.WriteLine("1. Calculate Star Velocity.");
-            double v = CalculateAstroMath.StarVelocity(500.1, 500.0);
+            double v = calculateAstroMath.StarVelocity(500.1, 500.0);
             Console.WriteLine( v + " m/s");      
             Console.WriteLine();
 
             //Star Distance
             Console.WriteLine("2. Calculate Star Distance.");
-            double distanceParsec = CalculateAstroMath.StarDistance(0.547);
+            double distanceParsec = calculateAstroMath.StarDistance(0.547);
             Console.WriteLine(distanceParsec + " parsec");
             Console.WriteLine();
 
             //Temparature in Kelvin
             Console.WriteLine("3. Calculate Temparature in kelvin");
-            double kelvin = CalculateAstroMath.TemparatureCoveter(27.0);
+            double kelvin = calculateAstroMath.TemparatureCoveter(27.0);
             Console.WriteLine(kelvin + " degrees");
             Console.WriteLine();
 
             //Event Horizon
             Console.WriteLine("4. Calculate Event Horizon.");
-            double r = CalculateAstroMath.EventHorizon(8.2e36);
+            double r = calculateAstroMath.EventHorizon(8.2e36);
             Console.WriteLine(r + " metres");
             Console.WriteLine();
 
