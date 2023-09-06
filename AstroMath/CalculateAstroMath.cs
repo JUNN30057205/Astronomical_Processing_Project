@@ -9,7 +9,7 @@ namespace AstroMath
     public class CalculateAstroMath
     {
         //Star Velocity
-        public static double StarVelocity(double ObservedWavelength, double RestWavelength)
+        public double StarVelocity(double ObservedWavelength, double RestWavelength)
         {
             //change in Wavelength = ObservedWavelength - RestWavelength
             //Speep of Light (C) = 299792458 meter per sec m/s
@@ -21,7 +21,7 @@ namespace AstroMath
         }
 
         //Star Distance
-        public static double StarDistance(double ArcsecondAngle)
+        public double StarDistance(double ArcsecondAngle)
         {
             //Parallax Angle(P) in arcseconds (1 arcs = 1/3600)
             //Distance (D) in parsecs (1 parsec = 3.0857 * 10 ^ 16m)
@@ -32,7 +32,7 @@ namespace AstroMath
         }
         
         //Temparature in Kelvin
-        public static double TemparatureCoveter(double Celsius)
+        public double TemparatureCoveter(double Celsius)
         {
             //Celsius must be greater than 273, Kelvin greater than 0 (TemC > -273, TemK > 0)
             if (Celsius < -273)
@@ -45,7 +45,7 @@ namespace AstroMath
         }
 
         //Event Horizon
-        public static double EventHorizon(double BlackholeMass)
+        public double EventHorizon(double BlackholeMass)
         {
             //Gravity Constant(G) = 6.674 * 10 ^-11 m3kg-1s-2
             //Speep of Light (C) = 299792458 meter per sec m/s
@@ -60,6 +60,7 @@ namespace AstroMath
     }
     //太陽を調べる光の目
     //https://jspc.sakura.ne.jp/sun_tour/sun_tour2017/list/20180322_ichimoto.pdf
+    //https://www.fenet.jp/dotnet/column/language/3839/
 
 }
     
