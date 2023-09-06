@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AstroMath;
+using System.ServiceModel;
 
 namespace ServiceContract
 {
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     internal class AstroServer : IAstroContract
     {
-        public string ReverseString(string value)
+        CalculateAstroMath calculateAstroMath = new CalculateAstroMath();
+
+        public double StarVelocity(double ObservedWavelength, double RestWavelength)
         {
-            char[] retVal = value.ToCharArray();
-            int idx = 0;
-            for (int i = value.Length - 1; i >= 0; i--)
-                retVal[idx++] = value[i];
-            return new string(retVal);
-        } 
+            return calculateAstroMath.StarVelocity(ObservedWavelength, RestWavelength);
+        }
     }
 }

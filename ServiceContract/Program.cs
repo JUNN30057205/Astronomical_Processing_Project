@@ -11,18 +11,14 @@ namespace ServiceContract
     {
         static void Main(string[] args)
         {
-            using(ServiceHost host = new ServiceHost(typeof(AstroServer),
-                new Uri[]{
-                    new Uri("net.pipe://localhost")
-                }))
-            {
-                host.AddServiceEndpoint(typeof(IAstroContract),
-                    new NetNamedPipeBinding(), "PipeReverse");
-                host.Open();
-                Console.WriteLine("Service is available. " + "Press <ENTER> to exit.");
-                Console.ReadLine();
-                host.Close();
-            }
+            string address = "net.pipe://localhost/";
+            ServiceHost serviceHost = new ServiceHost(typeof(AstroServer));
+            NetNamedPipeBinding binding = new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+            serviceHost.AddServiceEndpoint(typeof(IAstroContract), binding, address);
+            serviceHost.Open();
+            Console.WriteLine("ServiceHost is running. Press <<Return>> to Exit");
+            Console.ReadLine();
+            serviceHost.Close();
         }
     }
 }

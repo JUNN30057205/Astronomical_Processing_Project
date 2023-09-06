@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AstroMath;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -11,6 +12,10 @@ namespace ServiceContract
     internal interface IAstroContract
     {
         [OperationContract]
-        string ReverseString(string value);
+        //string ReverseString(string value);
+        double StarVelocity(double ObservedWavelength, double RestWavelength);
+
+
+
     }
 }
