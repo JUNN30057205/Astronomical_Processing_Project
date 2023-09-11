@@ -15,7 +15,14 @@ namespace ServiceContract
         //string ReverseString(string value);
         double StarVelocity(double ObservedWavelength, double RestWavelength);
 
+        [OperationContract]
+        double StarDistance(double ArcsecondAngle);
 
+        [OperationContract]
+        double TemparatureCoveter(double Celsius);
+
+        [OperationContract]
+        double EventHorizon(double BlackholeMass);
 
     }
 }

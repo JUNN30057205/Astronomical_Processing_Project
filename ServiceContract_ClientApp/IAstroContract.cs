@@ -9,8 +9,18 @@ namespace ServiceContract_ClientApp
 {
     [ServiceContract]
     internal interface IAstroContract
-    {
+    {        
+
+        [OperationContract]        
+        double StarVelocity(double ObservedWavelength, double RestWavelength);
+
         [OperationContract]
-        string ReverseString(string value);
+        double StarDistance(double ArcsecondAngle);
+
+        [OperationContract]
+        double TemparatureCoveter(double Celsius);
+
+        [OperationContract]
+        double EventHorizon(double BlackholeMass);
     }
 }

@@ -21,6 +21,21 @@ namespace Server_Test
             double v = channel.StarVelocity(500.1, 500.0);
             Console.WriteLine(v + " m/s");
             Console.WriteLine();
+
+            Console.WriteLine("2. Calculate Star Distance.");
+            double d = channel.StarDistance(0.547);
+            Console.WriteLine(d + "parsec");
+            Console.WriteLine();
+
+            Console.WriteLine("2. Calculate TemperatureCoverter.");
+            double k = channel.TemparatureCoveter(27.0);
+            Console.WriteLine(k + "degree");
+            Console.WriteLine();
+
+            Console.WriteLine("4. Calculate Event Horizon.");
+            double r = channel.EventHorizon(8.2e36);
+            Console.WriteLine(r + "metres");
+            Console.WriteLine();
         }
     }
 }
