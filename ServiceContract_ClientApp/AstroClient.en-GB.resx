@@ -153,61 +153,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="listView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 134</value>
+    <value>69, 90</value>
   </data>
   <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>976, 357</value>
+    <value>619, 218</value>
   </data>
-  <data name="formToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 34</value>
-  </data>
-  <data name="darkToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 34</value>
-  </data>
-  <data name="lightToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 34</value>
-  </data>
-  <data name="colourToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 34</value>
-  </data>
-  <data name="englishUKToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
-  </data>
-  <data name="germanyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
-  </data>
-  <data name="frenchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 34</value>
-  </data>
-  <data name="ButtonFrench.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8pt, style=Bold, Italic</value>
-  </data>
-  <data name="ButtonFrench.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ButtonFrench.Location" type="System.Drawing.Point, System.Drawing">
-    <value>921, 44</value>
-  </data>
-  <data name="ButtonFrench.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 73</value>
-  </data>
-  <data name="ButtonGermany.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8pt, style=Bold, Italic</value>
-  </data>
-  <data name="ButtonGermany.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="ButtonGermany.Location" type="System.Drawing.Point, System.Drawing">
-    <value>802, 45</value>
-  </data>
-  <data name="ButtonGermany.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 73</value>
-  </data>
-  <data name="ButtonEnglish.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="ButtonEnglish.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>744, 24</value>
   </data>
   <data name="ButtonEnglish.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 6pt, style=Bold, Italic</value>
@@ -215,13 +167,31 @@
   <data name="ButtonEnglish.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="ButtonEnglish.Location" type="System.Drawing.Point, System.Drawing">
+    <value>435, 26</value>
+  </data>
   <data name="ButtonEnglish.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 73</value>
+    <value>69, 48</value>
   </data>
-  <data name="ButtonEnglish.Text" xml:space="preserve">
-    <value>English</value>
+  <data name="ButtonGermany.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8pt, style=Bold, Italic</value>
   </data>
-  <data name="ButtonEnglish.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomCenter</value>
+  <data name="ButtonGermany.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 26</value>
+  </data>
+  <data name="ButtonGermany.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 48</value>
+  </data>
+  <data name="ButtonFrench.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8pt, style=Bold, Italic</value>
+  </data>
+  <data name="ButtonFrench.Location" type="System.Drawing.Point, System.Drawing">
+    <value>612, 26</value>
+  </data>
+  <data name="ButtonFrench.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 48</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>744, 460</value>
   </data>
 </root>

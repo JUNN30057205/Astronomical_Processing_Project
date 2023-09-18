@@ -188,14 +188,17 @@ namespace ServiceContract_ClientApp
         {
             ChangeLanguage("English");
         }
+
         private void ButtonGermany_Click(object sender, EventArgs e)
         {
             ChangeLanguage("Germany");
         }
+
         private void ButtonFrench_Click(object sender, EventArgs e)
         {
             ChangeLanguage("French");
         }
+
         private void ChangeLanguage(string language)
         {
             //Clear background color
@@ -203,20 +206,16 @@ namespace ServiceContract_ClientApp
             switch (language)
             {
                 case "English":
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-GB");
-                    //BackgroundImage = Properties.Resources.Greate_Britain_Image;
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-GB");                    
                     break;
                 case "Germany":
-                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
-                    //BackgroundImage = Properties.Resources.Germany_Deutschland_Image;
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");                    
                     break;
 
                 case "France":
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-FR");
-                    //BackgroundImage = Properties.Resources.French_France_Image;
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-FR");                    
                     break;
             }
-
             Controls.Clear();
             InitializeComponent();
         }
@@ -249,6 +248,7 @@ namespace ServiceContract_ClientApp
                 byte r = (byte)(255 - BackColor.R);
                 byte g = (byte)(255 - BackColor.G);
                 byte b = (byte)(255 - BackColor.B);
+                //byte a = (byte)(255 - BackColor.A);
                 ForeColor = Color.FromArgb(r, g, b);
                 foreach (var textBox in Controls.OfType<TextBox>())
                 {
@@ -273,9 +273,10 @@ namespace ServiceContract_ClientApp
             ForeColor = Color.DarkViolet;
         }
 
+
         #endregion
 
-        
+       
     }
 
 }

@@ -65,9 +65,9 @@
             this.englishUKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.germanyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frenchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ButtonFrench = new System.Windows.Forms.Button();
-            this.ButtonGermany = new System.Windows.Forms.Button();
             this.ButtonEnglish = new System.Windows.Forms.Button();
+            this.ButtonGermany = new System.Windows.Forms.Button();
+            this.ButtonFrench = new System.Windows.Forms.Button();
             this.gbStarVelocity.SuspendLayout();
             this.gbStarDistance.SuspendLayout();
             this.gbTemparature.SuspendLayout();
@@ -247,7 +247,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
@@ -316,13 +315,13 @@
             resources.ApplyResources(this.frenchToolStripMenuItem, "frenchToolStripMenuItem");
             this.frenchToolStripMenuItem.Click += new System.EventHandler(this.FrenchToolStripMenuItem_Click);
             // 
-            // ButtonFrench
+            // ButtonEnglish
             // 
-            this.ButtonFrench.BackgroundImage = global::ServiceContract_ClientApp.Properties.Resources.French_France_Image;
-            resources.ApplyResources(this.ButtonFrench, "ButtonFrench");
-            this.ButtonFrench.Name = "ButtonFrench";
-            this.ButtonFrench.UseVisualStyleBackColor = true;
-            this.ButtonFrench.Click += new System.EventHandler(this.ButtonFrench_Click);
+            this.ButtonEnglish.BackgroundImage = global::ServiceContract_ClientApp.Properties.Resources.Greate_Britain_Image;
+            resources.ApplyResources(this.ButtonEnglish, "ButtonEnglish");
+            this.ButtonEnglish.Name = "ButtonEnglish";
+            this.ButtonEnglish.UseVisualStyleBackColor = true;
+            this.ButtonEnglish.Click += new System.EventHandler(this.ButtonEnglish_Click);
             // 
             // ButtonGermany
             // 
@@ -332,21 +331,21 @@
             this.ButtonGermany.UseVisualStyleBackColor = true;
             this.ButtonGermany.Click += new System.EventHandler(this.ButtonGermany_Click);
             // 
-            // ButtonEnglish
+            // ButtonFrench
             // 
-            this.ButtonEnglish.BackgroundImage = global::ServiceContract_ClientApp.Properties.Resources.Greate_Britain_Image;
-            resources.ApplyResources(this.ButtonEnglish, "ButtonEnglish");
-            this.ButtonEnglish.Name = "ButtonEnglish";
-            this.ButtonEnglish.UseVisualStyleBackColor = true;
-            this.ButtonEnglish.Click += new System.EventHandler(this.ButtonEnglish_Click);
+            this.ButtonFrench.BackgroundImage = global::ServiceContract_ClientApp.Properties.Resources.French_France_Image;
+            resources.ApplyResources(this.ButtonFrench, "ButtonFrench");
+            this.ButtonFrench.Name = "ButtonFrench";
+            this.ButtonFrench.UseVisualStyleBackColor = true;
+            this.ButtonFrench.Click += new System.EventHandler(this.ButtonFrench_Click);
             // 
             // AstroClient
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ButtonEnglish);
             this.Controls.Add(this.ButtonFrench);
             this.Controls.Add(this.ButtonGermany);
+            this.Controls.Add(this.ButtonEnglish);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.gbEventHorizen);
             this.Controls.Add(this.gbTemparature);
@@ -381,8 +380,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.Button ButtonGermany;
-        private System.Windows.Forms.Button ButtonFrench;
         private System.Windows.Forms.Button Button_StarVelocity;
         private System.Windows.Forms.TextBox TextBox_Rest;
         private System.Windows.Forms.Label label5;
@@ -411,6 +408,8 @@
         private System.Windows.Forms.TextBox TextBox_Power;
         private System.Windows.Forms.ToolStripMenuItem frenchToolStripMenuItem;
         private System.Windows.Forms.Button ButtonEnglish;
+        private System.Windows.Forms.Button ButtonGermany;
+        private System.Windows.Forms.Button ButtonFrench;
     }
 }
 
