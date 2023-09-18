@@ -27,16 +27,14 @@ namespace ServiceContract_ClientApp
             EndpointAddress ep = new EndpointAddress(address);
             IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
             try
-            {
-                string[] data = new string[4];
-
+            {               
 
                 if (!string.IsNullOrEmpty(TextBox_Observed.Text) ||
                 !string.IsNullOrEmpty(TextBox_Rest.Text))
                 {
                     ListViewItem listViewItem = new ListViewItem(channel.StarVelocity(
-                        double.Parse(TextBox_Observed.Text),
-                        double.Parse(TextBox_Rest.Text)).ToString());
+                    double.Parse(TextBox_Observed.Text),
+                    double.Parse(TextBox_Rest.Text)).ToString());
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
@@ -47,11 +45,18 @@ namespace ServiceContract_ClientApp
                     //data[1] = result.ToString();
                     //ListViewItem listViewItem = new ListViewItem(data[1]);
                     //listView.Items.Add(listViewItem)
+
+                    //
+                   
+                }
+                else
+                {
+                    //message "textbox empty"
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                //Error!
             }
 
         }
@@ -129,7 +134,7 @@ namespace ServiceContract_ClientApp
                 ListViewItem listViewItem = new ListViewItem();
                 listViewItem.SubItems.Add("");
                 listViewItem.SubItems.Add("");
-                listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString());
+                listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00"));
                 listView.Items.Add(listViewItem);
             }
         }
@@ -180,9 +185,12 @@ namespace ServiceContract_ClientApp
             TextBox_KeyPress(sender, e, TextBox_Power);
         }
         #endregion
+
+       
     }
 }
 //menu strip or menu bar 
+//https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings
 //https://www.youtube.com/watch?v=w1FYv3_asTw
 //https://www.bing.com/videos/riverview/relatedvideo?&mid=4BBC5B5EACB643DCF8A34BBC5B5EACB643DCF8A3&ajaxhist=
 //https://www.bing.com/videos/riverview/relatedvideo?&q=C%23+create+multi+language+App+in+win+form&&mid=EE2003D065CFE43BE9B8EE2003D065CFE43BE9B8&&FORM=VRDGAR
