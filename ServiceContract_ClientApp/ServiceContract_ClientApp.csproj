@@ -56,6 +56,15 @@
     <Compile Include="IAstroContract.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AstroClient.de-DE.resx">
+      <DependentUpon>AstroClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AstroClient.en-GB.resx">
+      <DependentUpon>AstroClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AstroClient.fr-FR.resx">
+      <DependentUpon>AstroClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AstroClient.resx">
       <DependentUpon>AstroClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +76,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,6 +90,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Greate_Britain_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Germany_Deutschland_Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\French_France_Image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

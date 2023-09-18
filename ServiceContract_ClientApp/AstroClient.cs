@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ServiceContract_ClientApp
 {
@@ -18,16 +20,16 @@ namespace ServiceContract_ClientApp
             InitializeComponent();
         }
 
-        
+        #region Buttons
         private void Button_StarVelocity_Click(object sender, EventArgs e)
-        {            
+        {
             string address = "net.pipe://localhost/";
             NetNamedPipeBinding binding =
             new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
             EndpointAddress ep = new EndpointAddress(address);
             IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
             try
-            {               
+            {
 
                 if (!string.IsNullOrEmpty(TextBox_Observed.Text) ||
                 !string.IsNullOrEmpty(TextBox_Rest.Text))
@@ -40,14 +42,6 @@ namespace ServiceContract_ClientApp
                     listViewItem.SubItems.Add("");
                     listView.Items.Add(listViewItem);
 
-                    //double result = channel.StarVelocity(double.Parse(TextBox_Observed.Text),
-                    //                                    double.Parse(TextBox_Rest.Text));
-                    //data[1] = result.ToString();
-                    //ListViewItem listViewItem = new ListViewItem(data[1]);
-                    //listView.Items.Add(listViewItem)
-
-                    //
-                   
                 }
                 else
                 {
@@ -84,9 +78,9 @@ namespace ServiceContract_ClientApp
             {
 
             }
-            
 
-                      
+
+
         }
 
         private void Button_Temperature_Click(object sender, EventArgs e)
@@ -113,7 +107,7 @@ namespace ServiceContract_ClientApp
             {
 
             }
-           
+
 
         }
 
@@ -129,7 +123,7 @@ namespace ServiceContract_ClientApp
                 !string.IsNullOrEmpty(TextBox_Power.Text))
             {
                 double EventHorizen = double.Parse(TextBox_EventHorizen.Text);
-                double Power = double.Parse(TextBox_Power.Text);   
+                double Power = double.Parse(TextBox_Power.Text);
 
                 ListViewItem listViewItem = new ListViewItem();
                 listViewItem.SubItems.Add("");
@@ -138,6 +132,8 @@ namespace ServiceContract_ClientApp
                 listView.Items.Add(listViewItem);
             }
         }
+        #endregion
+
         #region KeyPress
         private void TextBox_KeyPress(object sender, KeyPressEventArgs e, TextBox textBox)
         {
@@ -151,8 +147,8 @@ namespace ServiceContract_ClientApp
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
-            }           
-                        
+            }
+
         }
 
         private void TextBox_Observed_KeyPress(object sender, KeyPressEventArgs e)
@@ -184,10 +180,104 @@ namespace ServiceContract_ClientApp
         {
             TextBox_KeyPress(sender, e, TextBox_Power);
         }
+
         #endregion
 
-       
+        #region Languages
+        private void ButtonEnglish_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("English");
+        }
+        private void ButtonGermany_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("Germany");
+        }
+        private void ButtonFrench_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("French");
+        }
+        private void ChangeLanguage(string language)
+        {
+            //Clear background color
+            BackColor = DefaultBackColor;
+            switch (language)
+            {
+                case "English":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-GB");
+                    //BackgroundImage = Properties.Resources.Greate_Britain_Image;
+                    break;
+                case "Germany":
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
+                    //BackgroundImage = Properties.Resources.Germany_Deutschland_Image;
+                    break;
+
+                case "France":
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-FR");
+                    //BackgroundImage = Properties.Resources.French_France_Image;
+                    break;
+            }
+
+            Controls.Clear();
+            InitializeComponent();
+        }
+
+        private void EnglishUKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("English");
+        }
+
+        private void GermanyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("Germany");
+        }
+
+        private void FrenchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangeLanguage("French");
+        }
+
+        #endregion
+
+        #region Colour Theme
+        private void colourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                BackgroundImage = null;
+                BackColor = colorDialog.Color;
+                byte r = (byte)(255 - BackColor.R);
+                byte g = (byte)(255 - BackColor.G);
+                byte b = (byte)(255 - BackColor.B);
+                ForeColor = Color.FromArgb(r, g, b);
+                foreach (var textBox in Controls.OfType<TextBox>())
+                {
+                    textBox.ForeColor = Color.FromArgb(r, g, b);
+                }
+            }
+        }
+
+
+
+        private void darkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackgroundImage = null;
+            BackColor = Color.Gray;
+            ForeColor = Color.DarkBlue;
+        }
+
+        private void lightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BackgroundImage = null;
+            BackColor = Color.LightCyan;
+            ForeColor = Color.DarkViolet;
+        }
+
+        #endregion
+
+        
     }
+
 }
 //menu strip or menu bar 
 //https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings
