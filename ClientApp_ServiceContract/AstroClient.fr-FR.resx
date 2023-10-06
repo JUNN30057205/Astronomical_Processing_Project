@@ -117,30 +117,131 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Vitesse des étoiles</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Distance des étoiles</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Température</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Horizon des événements</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
+    <value>175</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>699, 234</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Button_StarVelocity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="Button_StarVelocity.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="TextBox_Rest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 56</value>
+  </data>
+  <data name="TextBox_Rest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 22</value>
+  </data>
+  <data name="TextBox_Observed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 28</value>
+  </data>
+  <data name="TextBox_Observed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 22</value>
+  </data>
   <data name="label_RestWavelength.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="label_RestWavelength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 60</value>
+  </data>
+  <data name="label_RestWavelength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 15</value>
+  </data>
+  <data name="label_RestWavelength.Text" xml:space="preserve">
+    <value>Longueur d'onde de repos:</value>
   </data>
   <data name="label_ObservedWavelength.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label_ObservedWavelength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 15</value>
+  </data>
+  <data name="label_ObservedWavelength.Text" xml:space="preserve">
+    <value>Longueur d'onde observée:</value>
+  </data>
+  <data name="GroupBox_StarVelocity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 343</value>
+  </data>
+  <data name="GroupBox_StarVelocity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 126</value>
+  </data>
+  <data name="GroupBox_StarVelocity.Text" xml:space="preserve">
+    <value>Vitesse des étoiles</value>
+  </data>
   <data name="Button_StarDistance.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="Button_StarDistance.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="TextBox_StarDistance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>101, 53</value>
+  </data>
+  <data name="TextBox_StarDistance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
   </data>
   <data name="label_ArcsecondAngle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="label_ArcsecondAngle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 31</value>
+  </data>
+  <data name="label_ArcsecondAngle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 15</value>
+  </data>
+  <data name="label_ArcsecondAngle.Text" xml:space="preserve">
+    <value>Angle des secondes d'arc:</value>
+  </data>
+  <data name="GroupBox_StarDistance.Text" xml:space="preserve">
+    <value>Distance des étoiles</value>
+  </data>
   <data name="Button_Temperature.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="Button_Temperature.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="TextBox_Temperature.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 53</value>
+  </data>
+  <data name="TextBox_Temperature.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 22</value>
   </data>
   <data name="label_Celsius.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="GroupBox_Temperature.Text" xml:space="preserve">
+    <value>Température</value>
+  </data>
   <data name="Button_EventHorizon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="Button_EventHorizon.Text" xml:space="preserve">
+    <value>Calculer</value>
+  </data>
+  <data name="TextBox_EventHorizon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 57</value>
+  </data>
+  <data name="TextBox_EventHorizon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 22</value>
   </data>
   <data name="label_Power.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -148,17 +249,89 @@
   <data name="label_MeasuredinKilo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="Button_French.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label_MeasuredinKilo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 35</value>
   </data>
-  <data name="Button_Dueutsch.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="label_MeasuredinKilo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 15</value>
+  </data>
+  <data name="label_MeasuredinKilo.Text" xml:space="preserve">
+    <value>Mesuré en kilo</value>
+  </data>
+  <data name="GroupBox_EventHorizon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 126</value>
+  </data>
+  <data name="GroupBox_EventHorizon.Text" xml:space="preserve">
+    <value>Horizon des événements</value>
+  </data>
+  <data name="darkToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="darkToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mode sombre</value>
+  </data>
+  <data name="lightToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="lightToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mode d’éclairage</value>
+  </data>
+  <data name="formToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 22</value>
+  </data>
+  <data name="formToolStripMenuItem.Text" xml:space="preserve">
+    <value>Formulaire</value>
+  </data>
+  <data name="colourToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 22</value>
+  </data>
+  <data name="colourToolStripMenuItem.Text" xml:space="preserve">
+    <value>Couleur</value>
+  </data>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>Anglaise (UK)</value>
+  </data>
+  <data name="dueutschToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="dueutschToolStripMenuItem.Text" xml:space="preserve">
+    <value>Allemagne</value>
+  </data>
+  <data name="FrenchToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="FrenchToolStripMenuItem.Text" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 20</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 24</value>
+  </data>
+  <data name="Button_French.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Button_English.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="StatusLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 17</value>
+  </data>
+  <data name="StatusLabel.Text" xml:space="preserve">
+    <value>Message d’état</value>
+  </data>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>786, 22</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>786, 510</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Client Astro</value>

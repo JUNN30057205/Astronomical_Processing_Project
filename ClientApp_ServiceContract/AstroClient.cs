@@ -71,7 +71,7 @@ namespace ClientApp_ServiceContract
                 if (!string.IsNullOrEmpty(TextBox_StarDistance.Text))
                 {
                     ListViewItem listViewItem = new ListViewItem();
-                    listViewItem.SubItems.Add(channel.StarDistance(double.Parse(TextBox_StarDistance.Text)).ToString());
+                    listViewItem.SubItems.Add(channel.StarDistance(double.Parse(TextBox_StarDistance.Text)).ToString() + " persec");
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
                     listView.Items.Add(listViewItem);
@@ -85,7 +85,6 @@ namespace ClientApp_ServiceContract
             {
                 StatusMessage("Connection Error");
             }
-
         }
 
         private void Button_Temperature_Click(object sender, EventArgs e)
@@ -102,7 +101,7 @@ namespace ClientApp_ServiceContract
                 {
                     ListViewItem listViewItem = new ListViewItem();
                     listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add(channel.TemparatureCoveter(double.Parse(TextBox_Temperature.Text)).ToString());
+                    listViewItem.SubItems.Add(channel.TemparatureCoveter(double.Parse(TextBox_Temperature.Text)).ToString() + " K");
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
                     listView.Items.Add(listViewItem);
@@ -137,7 +136,7 @@ namespace ClientApp_ServiceContract
                     ListViewItem listViewItem = new ListViewItem();
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00"));
+                    listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00") + " metres");
                     listView.Items.Add(listViewItem);
                 }
                 else
@@ -226,7 +225,7 @@ namespace ClientApp_ServiceContract
                     break;
 
                 case "France":
-                    Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-FR");
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo("fr-FR");
                     break;
             }
             Controls.Clear();
@@ -247,7 +246,7 @@ namespace ClientApp_ServiceContract
 
         private void Button_French_Click(object sender, EventArgs e)
         {
-            ChangeLanguage("French");
+            ChangeLanguage("France");
         }
 
         private void EnglishToolStripMenuItem_Click(object sender, EventArgs e)
@@ -262,7 +261,7 @@ namespace ClientApp_ServiceContract
 
         private void FrenchToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            ChangeLanguage("French");
+            ChangeLanguage("France");
         }
 
         #endregion
