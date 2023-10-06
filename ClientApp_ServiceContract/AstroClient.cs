@@ -20,6 +20,8 @@ namespace ClientApp_ServiceContract
         {
             InitializeComponent();
         }
+        //define IAstroContract channel field.
+        private IAstroContract channel;
 
         #region Calculate Button        
         private void Button_StarVelocity_Click(object sender, EventArgs e)
@@ -28,7 +30,7 @@ namespace ClientApp_ServiceContract
             NetNamedPipeBinding binding =
             new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
             EndpointAddress ep = new EndpointAddress(address);
-            IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
+            channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
             try
             {
 
@@ -37,34 +39,35 @@ namespace ClientApp_ServiceContract
                 {
                     ListViewItem listViewItem = new ListViewItem(channel.StarVelocity(
                     double.Parse(TextBox_Observed.Text),
-                    double.Parse(TextBox_Rest.Text)).ToString());
+                    double.Parse(TextBox_Rest.Text)).ToString() + " m/s");
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
                     listView.Items.Add(listViewItem);
+                    StatusMessage("");
 
                 }
                 else
                 {
-                    //message "textbox empty"
+                    StatusMessage("Enter Valid Number in the TextBoxes");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                //Error!
+                StatusMessage("Connection Error");
             }
         }
 
         private void Button_StarDistance_Click(object sender, EventArgs e)
         {
-            string address = "net.pipe://localhost/";
-            NetNamedPipeBinding binding =
-            new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
-            EndpointAddress ep = new EndpointAddress(address);
-            IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
-
             try
             {
+                string address = "net.pipe://localhost/";
+                NetNamedPipeBinding binding =
+                new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+                EndpointAddress ep = new EndpointAddress(address);
+                channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
+                            
                 if (!string.IsNullOrEmpty(TextBox_StarDistance.Text))
                 {
                     ListViewItem listViewItem = new ListViewItem();
@@ -73,70 +76,87 @@ namespace ClientApp_ServiceContract
                     listViewItem.SubItems.Add("");
                     listView.Items.Add(listViewItem);
                 }
+                else
+                {
+                    StatusMessage("Enter Valid Number in the TextBox");
+                }
             }
-            catch
+            catch (Exception)
             {
-
+                StatusMessage("Connection Error");
             }
+
         }
 
         private void Button_Temperature_Click(object sender, EventArgs e)
         {
-            string address = "net.pipe://localhost/";
-            NetNamedPipeBinding binding =
-            new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
-            EndpointAddress ep = new EndpointAddress(address);
-            IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
-
             try
             {
+                string address = "net.pipe://localhost/";
+                NetNamedPipeBinding binding =
+                new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+                EndpointAddress ep = new EndpointAddress(address);
+                IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
+
                 if (!string.IsNullOrEmpty(TextBox_Temperature.Text))
                 {
-                    try
-                    {
-                        if (!string.IsNullOrEmpty(TextBox_Temperature.Text))
-                        {
-                            ListViewItem listViewItem = new ListViewItem();
-                            listViewItem.SubItems.Add("");
-                            listViewItem.SubItems.Add(channel.TemparatureCoveter(double.Parse(TextBox_Temperature.Text)).ToString());
-                            listViewItem.SubItems.Add("");
-                            listViewItem.SubItems.Add("");
-                            listView.Items.Add(listViewItem);
-                        }
-                    }
-                    catch
-                    {
-
-                    }
+                    ListViewItem listViewItem = new ListViewItem();
+                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add(channel.TemparatureCoveter(double.Parse(TextBox_Temperature.Text)).ToString());
+                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add("");
+                    listView.Items.Add(listViewItem);
+                }
+                else
+                {
+                    StatusMessage("Enter Valid Number in the TextBox");
                 }
             }
             catch
             {
-
+                StatusMessage("Connection Error");
             }
-
         }
 
         private void Button_EventHorizon_Click(object sender, EventArgs e)
         {
-            string address = "net.pipe://localhost/";
-            NetNamedPipeBinding binding =
-            new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
-            EndpointAddress ep = new EndpointAddress(address);
-            IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
-
-            if (!string.IsNullOrEmpty(TextBox_EventHorizon.Text) ||
-                !string.IsNullOrEmpty(TextBox_Power.Text))
+            try
             {
-                double EventHorizen = double.Parse(TextBox_EventHorizon.Text);
-                double Power = double.Parse(TextBox_Power.Text);
+                string address = "net.pipe://localhost/";
+                NetNamedPipeBinding binding =
+                new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
+                EndpointAddress ep = new EndpointAddress(address);
+                IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
 
-                ListViewItem listViewItem = new ListViewItem();
-                listViewItem.SubItems.Add("");
-                listViewItem.SubItems.Add("");
-                listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00"));
-                listView.Items.Add(listViewItem);
+                if (!string.IsNullOrEmpty(TextBox_EventHorizon.Text) ||
+                    !string.IsNullOrEmpty(TextBox_Power.Text))
+                {
+                    double EventHorizen = double.Parse(TextBox_EventHorizon.Text);
+                    double Power = double.Parse(TextBox_Power.Text);
+
+                    ListViewItem listViewItem = new ListViewItem();
+                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00"));
+                    listView.Items.Add(listViewItem);
+                }
+                else
+                {
+                    StatusMessage("Enter Valid Number in the TextBox");
+                }
             }
+            catch
+            {
+                StatusMessage("Connection Error");
+            }
+            
+        }
+
+        private void StatusMessage(string msg)
+        {
+            StatusLabel.Text = msg;
+            StatusLabel.ForeColor = Color.Crimson;
+            StatusLabel.BackColor = Color.LightYellow;
         }
         #endregion
 
@@ -144,11 +164,15 @@ namespace ClientApp_ServiceContract
         private void TextBox_KeyPress (object sender, KeyPressEventArgs e, System.Windows.Forms.TextBox text)
         {
             //avoid character & symbols
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
-
+            //accept negative digit at the start of textboxes
+            if (e.KeyChar == '-' && text.SelectionStart != 0)
+            {
+                e.Handled = true;
+            }
             // only allow one decimal point
             if ((e.KeyChar == '.') && ((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1))
             {
@@ -207,6 +231,8 @@ namespace ClientApp_ServiceContract
             }
             Controls.Clear();
             InitializeComponent();
+            this.BackColor = default(Color);
+            this.ForeColor = default(Color);
         }
 
         private void Button_English_Click(object sender, EventArgs e)
@@ -241,6 +267,7 @@ namespace ClientApp_ServiceContract
 
         #endregion
 
+        #region Color Theme
         private void ColourToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog colorDialog = new ColorDialog();
@@ -262,16 +289,25 @@ namespace ClientApp_ServiceContract
 
         private void DarkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BackgroundImage = null;
-            BackColor = Color.Gray;
-            ForeColor = Color.DarkBlue;
+            ChangeToDarkMode();
         }
-
         private void LightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           ChangeToLightMode();
+        }
+        private void ChangeToLightMode()
         {
             BackgroundImage = null;
             BackColor = Color.LightCyan;
             ForeColor = Color.DarkViolet;
         }
+        private void ChangeToDarkMode()
+        {
+            BackgroundImage = null;
+            BackColor = Color.DarkGray;
+            ForeColor = Color.DarkBlue;
+        }
+        
+        #endregion
     }
 }

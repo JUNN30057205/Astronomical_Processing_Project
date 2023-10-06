@@ -67,11 +67,14 @@
             this.Button_French = new System.Windows.Forms.Button();
             this.Button_German = new System.Windows.Forms.Button();
             this.Button_English = new System.Windows.Forms.Button();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.GroupBox_StarVelocity.SuspendLayout();
             this.GroupBox_StarDistance.SuspendLayout();
             this.GroupBox_Temperature.SuspendLayout();
             this.GroupBox_EventHorizon.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // listView
@@ -330,10 +333,23 @@
             this.Button_English.UseVisualStyleBackColor = true;
             this.Button_English.Click += new System.EventHandler(this.Button_English_Click);
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusLabel});
+            resources.ApplyResources(this.statusStrip, "statusStrip");
+            this.statusStrip.Name = "statusStrip";
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Name = "StatusLabel";
+            resources.ApplyResources(this.StatusLabel, "StatusLabel");
+            // 
             // AstroClient
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.Button_French);
             this.Controls.Add(this.Button_German);
             this.Controls.Add(this.Button_English);
@@ -355,6 +371,8 @@
             this.GroupBox_EventHorizon.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,6 +418,8 @@
         private System.Windows.Forms.ToolStripMenuItem FrenchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel StatusLabel;
     }
 }
 
