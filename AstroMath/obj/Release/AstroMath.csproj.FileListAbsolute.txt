@@ -10,3 +10,10 @@ C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\AstroMa
 C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.csproj.CoreCompileInputs.cache
 C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.dll
 C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.pdb
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\bin\Release\AstroMath.dll
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\bin\Release\AstroMath.pdb
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.csproj.AssemblyReference.cache
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.csproj.CoreCompileInputs.cache
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.dll
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\obj\Release\AstroMath.pdb
+C:\Users\hoops\source\repos\Astronomical_Processing_Project\AstroMath\bin\Release\AstroMath.xml

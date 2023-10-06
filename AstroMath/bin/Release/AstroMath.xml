@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AstroMath</name>
+    </assembly>
+    <members>
+        <member name="T:AstroMath.CalculateAstroMath">
+            <summary>
+            A DLL file with the following four mathematical formulas and save the file as AstroMath.DLL. 
+            </summary>
+        </member>
+        <member name="M:AstroMath.CalculateAstroMath.StarVelocity(System.Double,System.Double)">
+            <summary>
+            Star Velocity: 
+            To calculate the Star velocity using the Doppler shift, it has two input parameters of type double (Observed Wavelength and Rest Wavelength).
+            Fomula: v = c* (Δλ / λo)
+            </summary>
+            <param name="ObservedWavelength">Input double represening the observed wavelength of the body in nano metres</param>
+            <param name="RestWavelength">Input double value representing the rest wavelength of the body in nano metres</param>
+            <returns>Return a double which represents the velocity</returns>
+        </member>
+        <member name="M:AstroMath.CalculateAstroMath.StarDistance(System.Double)">
+            <summary>
+            Star Distance:
+            To calculate the star distance using the parallax angle, it has a single input parameter of type double (Arcseconds angle).
+            Fomula: Dstar = 1 / P
+            Dstar = 1 / P Where Dstar is the Star Distance(parsecs) P is the parallax angle(arc-seconds)
+            To calculate the star distance, divide 1 by the parallax angle.
+            </summary>
+            <param name="ArcsecondAngle">Input double value representing the observed angle of the star in arcseconds</param>
+            <returns>Return a double which represents distance of the star</returns>
+        </member>
+        <member name="M:AstroMath.CalculateAstroMath.TemparatureCoveter(System.Double)">
+            <summary>
+            To convert Celsius to Kelvin, simply take the Celsius temperature and add 273. 
+            The method has a single input parameter of type double (temperature in Celsius).
+            Fomula: K = C + 273
+            </summary>
+            <param name="Celsius">Input double value representing the temperature of celsius</param>
+            <returns>Returns a double which is the temperature in the target unit</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Error handling for "Out of Range"</exception>
+        </member>
+        <member name="M:AstroMath.CalculateAstroMath.EventHorizon(System.Double)">
+            <summary>
+            To calculate The Schwarzschild radius you obtain the gravitational acceleration on the surface of a black hole, also called the event horizon.
+            The method has a single input parameter of type double (Blackhole Mass)
+            Fomula:  R = 2*G* M/C^2.
+            </summary>
+            <param name="BlackholeMass">Input double value representing the mass of the black hole in kilograms</param>
+            <returns>Return a double which is the event horizon in metres</returns>
+        </member>
+    </members>
+</doc>
