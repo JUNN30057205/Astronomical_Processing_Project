@@ -35,7 +35,7 @@ namespace ClientApp_ServiceContract
             {
 
                 if (!string.IsNullOrEmpty(TextBox_Observed.Text) ||
-                !string.IsNullOrEmpty(TextBox_Rest.Text))
+                    !string.IsNullOrEmpty(TextBox_Rest.Text))
                 {
                     ListViewItem listViewItem = new ListViewItem(channel.StarVelocity(
                     double.Parse(TextBox_Observed.Text),
@@ -75,6 +75,7 @@ namespace ClientApp_ServiceContract
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add("");
                     listView.Items.Add(listViewItem);
+                    StatusMessage("");
                 }
                 else
                 {
@@ -95,16 +96,16 @@ namespace ClientApp_ServiceContract
                 NetNamedPipeBinding binding =
                 new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
                 EndpointAddress ep = new EndpointAddress(address);
-                IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
+                channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
 
                 if (!string.IsNullOrEmpty(TextBox_Temperature.Text))
                 {
                     ListViewItem listViewItem = new ListViewItem();
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add(channel.TemparatureCoveter(double.Parse(TextBox_Temperature.Text)).ToString() + " K");
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add("");                    
                     listView.Items.Add(listViewItem);
+                    StatusMessage("");
                 }
                 else
                 {
@@ -125,7 +126,7 @@ namespace ClientApp_ServiceContract
                 NetNamedPipeBinding binding =
                 new NetNamedPipeBinding(NetNamedPipeSecurityMode.None);
                 EndpointAddress ep = new EndpointAddress(address);
-                IAstroContract channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
+                channel = ChannelFactory<IAstroContract>.CreateChannel(binding, ep);
 
                 if (!string.IsNullOrEmpty(TextBox_EventHorizon.Text) ||
                     !string.IsNullOrEmpty(TextBox_Power.Text))
@@ -138,10 +139,11 @@ namespace ClientApp_ServiceContract
                     listViewItem.SubItems.Add("");
                     listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00") + " metres");
                     listView.Items.Add(listViewItem);
+                    StatusMessage("");
                 }
                 else
                 {
-                    StatusMessage("Enter Valid Number in the TextBox");
+                    StatusMessage("Enter Valid Number in the TextBoxes");
                 }
             }
             catch
