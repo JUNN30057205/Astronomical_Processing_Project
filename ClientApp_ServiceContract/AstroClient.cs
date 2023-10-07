@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Reflection.Emit;
 using System.ServiceModel;
 using System.Text;
 using System.Threading;
@@ -40,11 +41,14 @@ namespace ClientApp_ServiceContract
                     ListViewItem listViewItem = new ListViewItem(channel.StarVelocity(
                     double.Parse(TextBox_Observed.Text),
                     double.Parse(TextBox_Rest.Text)).ToString() + " m/s");
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add("~");
+                    listViewItem.SubItems.Add("~");
+                    listViewItem.SubItems.Add("~");
                     listView.Items.Add(listViewItem);
+                    
                     StatusMessage("");
+                    TextBox_Observed.Clear();
+                    TextBox_Rest.Clear();
 
                 }
                 else
@@ -70,12 +74,13 @@ namespace ClientApp_ServiceContract
                             
                 if (!string.IsNullOrEmpty(TextBox_StarDistance.Text))
                 {
-                    ListViewItem listViewItem = new ListViewItem();
+                    ListViewItem listViewItem = new ListViewItem("~");
                     listViewItem.SubItems.Add(channel.StarDistance(double.Parse(TextBox_StarDistance.Text)).ToString() + " persec");
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
+                    listViewItem.SubItems.Add("~");
+                    listViewItem.SubItems.Add("~");
                     listView.Items.Add(listViewItem);
                     StatusMessage("");
+                    TextBox_StarDistance.Clear();
                 }
                 else
                 {
@@ -100,12 +105,13 @@ namespace ClientApp_ServiceContract
 
                 if (!string.IsNullOrEmpty(TextBox_Temperature.Text))
                 {
-                    ListViewItem listViewItem = new ListViewItem();
-                    listViewItem.SubItems.Add("");
+                    ListViewItem listViewItem = new ListViewItem("~");
+                    listViewItem.SubItems.Add("~");
                     listViewItem.SubItems.Add(channel.TemparatureCoveter(double.Parse(TextBox_Temperature.Text)).ToString() + " K");
-                    listViewItem.SubItems.Add("");                    
+                    listViewItem.SubItems.Add("~");                    
                     listView.Items.Add(listViewItem);
                     StatusMessage("");
+                    TextBox_Temperature.Clear();
                 }
                 else
                 {
@@ -134,12 +140,15 @@ namespace ClientApp_ServiceContract
                     double EventHorizen = double.Parse(TextBox_EventHorizon.Text);
                     double Power = double.Parse(TextBox_Power.Text);
 
-                    ListViewItem listViewItem = new ListViewItem();
-                    listViewItem.SubItems.Add("");
-                    listViewItem.SubItems.Add("");
+                    ListViewItem listViewItem = new ListViewItem("~");
+                    listViewItem.SubItems.Add("~");
+                    listViewItem.SubItems.Add("~");
                     listViewItem.SubItems.Add(channel.EventHorizon(EventHorizen * Math.Pow(10, Power)).ToString("0.0e+00") + " metres");
                     listView.Items.Add(listViewItem);
+
                     StatusMessage("");
+                    TextBox_EventHorizon.Clear();
+                    TextBox_Power.Clear();                    
                 }
                 else
                 {
@@ -274,7 +283,7 @@ namespace ClientApp_ServiceContract
             ColorDialog colorDialog = new ColorDialog();
             if (colorDialog.ShowDialog() == DialogResult.OK)
             {
-                BackgroundImage = null;
+                BackgroundImage = null;                
                 BackColor = colorDialog.Color;
                 byte r = (byte)(255 - BackColor.R);
                 byte g = (byte)(255 - BackColor.G);
@@ -283,9 +292,10 @@ namespace ClientApp_ServiceContract
                 ForeColor = Color.FromArgb(r, g, b);
                 foreach (var textBox in Controls.OfType<System.Windows.Forms.TextBox>())
                 {
-                    textBox.ForeColor = Color.FromArgb(r, g, b);
-                }
+                    textBox.ForeColor = Color.FromArgb(r, g, b);                    
+                }                   
             }
+
         }
 
         private void DarkToolStripMenuItem_Click(object sender, EventArgs e)
@@ -308,7 +318,7 @@ namespace ClientApp_ServiceContract
             BackColor = Color.DarkGray;
             ForeColor = Color.DarkBlue;
         }
-        
+       
         #endregion
     }
 }

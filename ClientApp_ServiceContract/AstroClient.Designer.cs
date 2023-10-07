@@ -79,13 +79,13 @@
             // 
             // listView
             // 
-            resources.ApplyResources(this.listView, "listView");
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
             this.listView.HideSelection = false;
+            resources.ApplyResources(this.listView, "listView");
             this.listView.Name = "listView";
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -108,12 +108,14 @@
             // 
             // GroupBox_StarVelocity
             // 
-            resources.ApplyResources(this.GroupBox_StarVelocity, "GroupBox_StarVelocity");
+            this.GroupBox_StarVelocity.BackColor = System.Drawing.SystemColors.Control;
             this.GroupBox_StarVelocity.Controls.Add(this.Button_StarVelocity);
             this.GroupBox_StarVelocity.Controls.Add(this.TextBox_Rest);
             this.GroupBox_StarVelocity.Controls.Add(this.TextBox_Observed);
             this.GroupBox_StarVelocity.Controls.Add(this.label_RestWavelength);
             this.GroupBox_StarVelocity.Controls.Add(this.label_ObservedWavelength);
+            resources.ApplyResources(this.GroupBox_StarVelocity, "GroupBox_StarVelocity");
+            this.GroupBox_StarVelocity.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GroupBox_StarVelocity.Name = "GroupBox_StarVelocity";
             this.GroupBox_StarVelocity.TabStop = false;
             // 
@@ -148,10 +150,12 @@
             // 
             // GroupBox_StarDistance
             // 
-            resources.ApplyResources(this.GroupBox_StarDistance, "GroupBox_StarDistance");
+            this.GroupBox_StarDistance.BackColor = System.Drawing.SystemColors.Control;
             this.GroupBox_StarDistance.Controls.Add(this.Button_StarDistance);
             this.GroupBox_StarDistance.Controls.Add(this.TextBox_StarDistance);
             this.GroupBox_StarDistance.Controls.Add(this.label_ArcsecondAngle);
+            resources.ApplyResources(this.GroupBox_StarDistance, "GroupBox_StarDistance");
+            this.GroupBox_StarDistance.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GroupBox_StarDistance.Name = "GroupBox_StarDistance";
             this.GroupBox_StarDistance.TabStop = false;
             // 
@@ -175,10 +179,12 @@
             // 
             // GroupBox_Temperature
             // 
-            resources.ApplyResources(this.GroupBox_Temperature, "GroupBox_Temperature");
+            this.GroupBox_Temperature.BackColor = System.Drawing.SystemColors.Control;
             this.GroupBox_Temperature.Controls.Add(this.Button_Temperature);
             this.GroupBox_Temperature.Controls.Add(this.TextBox_Temperature);
             this.GroupBox_Temperature.Controls.Add(this.label_Celsius);
+            resources.ApplyResources(this.GroupBox_Temperature, "GroupBox_Temperature");
+            this.GroupBox_Temperature.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GroupBox_Temperature.Name = "GroupBox_Temperature";
             this.GroupBox_Temperature.TabStop = false;
             // 
@@ -202,12 +208,14 @@
             // 
             // GroupBox_EventHorizon
             // 
-            resources.ApplyResources(this.GroupBox_EventHorizon, "GroupBox_EventHorizon");
+            this.GroupBox_EventHorizon.BackColor = System.Drawing.SystemColors.Control;
             this.GroupBox_EventHorizon.Controls.Add(this.Button_EventHorizon);
             this.GroupBox_EventHorizon.Controls.Add(this.TextBox_Power);
             this.GroupBox_EventHorizon.Controls.Add(this.TextBox_EventHorizon);
             this.GroupBox_EventHorizon.Controls.Add(this.label_Power);
             this.GroupBox_EventHorizon.Controls.Add(this.label_MeasuredinKilo);
+            resources.ApplyResources(this.GroupBox_EventHorizon, "GroupBox_EventHorizon");
+            this.GroupBox_EventHorizon.ForeColor = System.Drawing.SystemColors.ControlText;
             this.GroupBox_EventHorizon.Name = "GroupBox_EventHorizon";
             this.GroupBox_EventHorizon.TabStop = false;
             // 
@@ -242,108 +250,108 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.styleToolStripMenuItem,
             this.languageToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // styleToolStripMenuItem
             // 
-            resources.ApplyResources(this.styleToolStripMenuItem, "styleToolStripMenuItem");
             this.styleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formToolStripMenuItem,
             this.colourToolStripMenuItem});
             this.styleToolStripMenuItem.Name = "styleToolStripMenuItem";
+            resources.ApplyResources(this.styleToolStripMenuItem, "styleToolStripMenuItem");
             // 
             // formToolStripMenuItem
             // 
-            resources.ApplyResources(this.formToolStripMenuItem, "formToolStripMenuItem");
             this.formToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.darkToolStripMenuItem,
             this.lightToolStripMenuItem});
             this.formToolStripMenuItem.Name = "formToolStripMenuItem";
+            resources.ApplyResources(this.formToolStripMenuItem, "formToolStripMenuItem");
             // 
             // darkToolStripMenuItem
             // 
-            resources.ApplyResources(this.darkToolStripMenuItem, "darkToolStripMenuItem");
             this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
+            resources.ApplyResources(this.darkToolStripMenuItem, "darkToolStripMenuItem");
             this.darkToolStripMenuItem.Click += new System.EventHandler(this.DarkToolStripMenuItem_Click);
             // 
             // lightToolStripMenuItem
             // 
-            resources.ApplyResources(this.lightToolStripMenuItem, "lightToolStripMenuItem");
             this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
+            resources.ApplyResources(this.lightToolStripMenuItem, "lightToolStripMenuItem");
             this.lightToolStripMenuItem.Click += new System.EventHandler(this.LightToolStripMenuItem_Click);
             // 
             // colourToolStripMenuItem
             // 
-            resources.ApplyResources(this.colourToolStripMenuItem, "colourToolStripMenuItem");
             this.colourToolStripMenuItem.Name = "colourToolStripMenuItem";
+            resources.ApplyResources(this.colourToolStripMenuItem, "colourToolStripMenuItem");
             this.colourToolStripMenuItem.Click += new System.EventHandler(this.ColourToolStripMenuItem_Click);
             // 
             // languageToolStripMenuItem
             // 
-            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.englishToolStripMenuItem,
             this.dueutschToolStripMenuItem,
             this.FrenchToolStripMenuItem});
             this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
             // 
             // englishToolStripMenuItem
             // 
-            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.EnglishToolStripMenuItem_Click);
             // 
             // dueutschToolStripMenuItem
             // 
-            resources.ApplyResources(this.dueutschToolStripMenuItem, "dueutschToolStripMenuItem");
             this.dueutschToolStripMenuItem.Name = "dueutschToolStripMenuItem";
+            resources.ApplyResources(this.dueutschToolStripMenuItem, "dueutschToolStripMenuItem");
             this.dueutschToolStripMenuItem.Click += new System.EventHandler(this.DueutschToolStripMenuItem_Click);
             // 
             // FrenchToolStripMenuItem
             // 
-            resources.ApplyResources(this.FrenchToolStripMenuItem, "FrenchToolStripMenuItem");
             this.FrenchToolStripMenuItem.Name = "FrenchToolStripMenuItem";
+            resources.ApplyResources(this.FrenchToolStripMenuItem, "FrenchToolStripMenuItem");
             this.FrenchToolStripMenuItem.Click += new System.EventHandler(this.FrenchToolStripMenuItem_Click_1);
             // 
             // Button_French
             // 
-            resources.ApplyResources(this.Button_French, "Button_French");
             this.Button_French.BackgroundImage = global::ClientApp_ServiceContract.Properties.Resources.French_France_Image;
+            resources.ApplyResources(this.Button_French, "Button_French");
             this.Button_French.Name = "Button_French";
             this.Button_French.UseVisualStyleBackColor = true;
             this.Button_French.Click += new System.EventHandler(this.Button_French_Click);
             // 
             // Button_German
             // 
-            resources.ApplyResources(this.Button_German, "Button_German");
             this.Button_German.BackgroundImage = global::ClientApp_ServiceContract.Properties.Resources.Germany_Deutschland_Image;
+            resources.ApplyResources(this.Button_German, "Button_German");
             this.Button_German.Name = "Button_German";
             this.Button_German.UseVisualStyleBackColor = true;
             this.Button_German.Click += new System.EventHandler(this.Button_German_Click);
             // 
             // Button_English
             // 
-            resources.ApplyResources(this.Button_English, "Button_English");
             this.Button_English.BackgroundImage = global::ClientApp_ServiceContract.Properties.Resources.Greate_Britain_Image;
+            resources.ApplyResources(this.Button_English, "Button_English");
             this.Button_English.Name = "Button_English";
             this.Button_English.UseVisualStyleBackColor = true;
             this.Button_English.Click += new System.EventHandler(this.Button_English_Click);
             // 
             // statusStrip
             // 
-            resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusLabel});
+            resources.ApplyResources(this.statusStrip, "statusStrip");
             this.statusStrip.Name = "statusStrip";
             // 
             // StatusLabel
             // 
-            resources.ApplyResources(this.StatusLabel, "StatusLabel");
             this.StatusLabel.Name = "StatusLabel";
+            resources.ApplyResources(this.StatusLabel, "StatusLabel");
             // 
             // AstroClient
             // 

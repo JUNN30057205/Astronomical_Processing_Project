@@ -1,0 +1,10 @@
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\bin\Release\ServiceContract.exe.config
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\bin\Release\ServiceContract.exe
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\bin\Release\ServiceContract.pdb
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\bin\Release\AstroMath.dll
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\obj\Release\ServiceContract.csproj.AssemblyReference.cache
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\obj\Release\ServiceContract.csproj.SuggestedBindingRedirects.cache
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\obj\Release\ServiceContract.csproj.CoreCompileInputs.cache
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\obj\Release\ServiceContract.csproj.CopyComplete
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\obj\Release\ServiceContract.exe
+C:\Users\hoops\source\repos\JUNN30057205\Astronomical_Processing_Project\ServiceContract\obj\Release\ServiceContract.pdb
